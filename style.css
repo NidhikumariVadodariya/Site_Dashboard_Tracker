@@ -1,0 +1,365 @@
+/* CSS */
+
+* {   /* keep all the content in one box of the website page */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {   /* styled the fonts of the body(whole webpage) and having a space of the height of 1.6 */
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #111827;
+    line-height: 1.6;
+}
+
+.container {  /* body part is styled (header and main sections) */
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 8%;
+}
+
+header {    /* whole header (Site Progress Dashboard) is styled */
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+header h1 {    /* header's Site Progress Dashboard is styled */
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {     /* header's Site Progress Dashboard's paragraph is styled */
+    font-size: 18px;
+    color: #d1d5db;
+}
+
+.dashboard {  /* main section has been styled */
+    padding: 60px 0;
+}
+
+.summary-cards {    /* Total activities have been grid or column */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.card {    /* all the card activites like Total activities, Completed, and Pending have been styled in columned and animated */
+    background: white;
+    padding: 26px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {   /* when you hover on the card's activites, its been highlighted or animated towards top */
+    transform: translateY(-4px);
+}
+
+.card.active-filter {
+    transform: translateY(-4px);
+}
+
+.total-card.active-filter {
+    border: 1px solid #facc15;
+    box-shadow: 0 14px 28px rgba(250, 204, 21, 0.25);
+}
+
+.completed-card.active-filter {
+    border: 1px solid #22c55e;
+    box-shadow: 0 14px 28px rgba(34, 197, 94, 0.25);
+}
+
+.progress-card.active-filter {
+    border: 1px solid #3b82f6;
+    box-shadow: 0 14px 28px rgba(59, 130, 246, 0.25);
+}
+
+.pending-card.active-filter {
+    border: 1px solid #f97316;
+    box-shadow: 0 14px 28px rgba(249, 115, 22, 0.25);
+}
+
+.total-card:hover {
+    border: 1px solid #facc15;
+    box-shadow: 0 14px 28px rgba(250, 204, 21, 0.25);
+}
+
+.completed-card:hover {
+    border: 1px solid #22c55e;
+    box-shadow: 0 14px 28px rgba(34, 197, 94, 0.25);
+}
+
+.progress-card:hover {
+    border: 1px solid #3b82f6;
+    box-shadow: 0 14px 28px rgba(59, 130, 246, 0.25);
+}
+
+.pending-card:hover {
+    border: 1px solid #f97316;
+    box-shadow: 0 14px 28px rgba(249, 115, 22, 0.25);
+}
+
+.card h3 {     /* card's activites, like Total activities, Completed, and Pending have been styled  */
+    color: #374151;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.card p {    /* card's activites, like Completed, and Pending have been styled (numbers) */
+    font-size: 34px;
+    font-weight: bold;
+    color: #ca8a04;
+}
+
+.progress-box,
+.form-box,
+.activity-section {    /* Overall Progress, Add Site Activity, Activity Tracker have been bordered and styled */
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 28px;
+}
+
+.form-box:hover {
+    transition: 0.3s ease;
+    transform: translateY(-4px);
+}
+
+.activity-section:hover {
+    transition: 0.3s ease;
+    transform: translateY(-4px);
+}
+
+.progress-info {    /* Overall Progress has been styled */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.progress-box:hover {
+    transition: 0.3s ease;
+    transform: translateY(-4px);
+}
+
+.progress-info h2,
+.form-box h2,
+.activity-section h2 {   /* Overall Progress, Add Site Activity, Activity Tracker's head text been styled */
+    color: #0f172a;
+    font-size: 24px;
+}
+
+#progressPercent {   /* Overall Progress numbers highlighted by orange (this is id, not a class so started by "#" not ".") */
+    font-size: 22px;
+    font-weight: bold;
+    color: #ca8a04;
+}
+
+.progress-bar {    /* Overall Progress's progress will detect through is progress bar */
+    width: 100%;
+    height: 18px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {   /* would be filled progress bar been styled */
+    width: 0%;
+    height: 100%;
+    background: #facc15;
+    border-radius: 999px;
+    transition: width 0.4s ease;
+}
+
+.form-grid {    /* main section's Add Site Activity's like input box have been styled */
+    display: grid;
+    grid-template-columns: 1fr 180px 160px;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.form-grid input,
+.form-grid select {   /* main section's Add Site Activity's like input box have been styled */
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {   /* main section's Add Site Activity's like input box have been focused and color changed when the to be tasked added */
+    border-color: #facc15;
+    box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.2);
+}
+
+.form-grid button {  /* Add activity button is highlighted to yellow and styled with the other attributes */
+    background: #facc15;
+    color: #0f172a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.form-grid button:hover {   /* Add activity button is highlighted when the cursor hover on it and styled with the other attributes */
+    background: #eab308;
+    transform: translateY(-2px);
+}
+
+.empty-state {  /* "No site activities added yet." from the "Activity Tracker" has been styled*/
+    background: #f8fafc;
+    text-align: center;
+    padding: 24px;
+    border-radius: 12px;
+    color: #6b7280;
+    margin-top: 18px;
+}
+
+.activity-list {   /* whatever activites would be listed, been styled */
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.activity-item {   /* whatever activites would be listed, been styled */
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 12px;
+    display: grid;
+    /* grid-template-columns: 1fr 140px 90px; */
+    grid-template-columns: 1fr 160px 110px;
+    align-items: center;
+    gap: 14px;
+    animation: fadeSlideIn 0.4s ease;
+    transition: 0.3s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.activity-item:hover {
+    transform: translateY(-3px);
+}
+
+.activity-item h3 {  /* whatever activites would be listed, been styled */
+    font-size: 16px;
+    color: #111827;
+}
+
+.status {   /* whatever tasks will add, been styled */
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status.pending {  /* pending tasked button would be styled */
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.activity-item:has(.status.pending):hover {
+    border-color: #f97316;
+    box-shadow: 0 12px 24px rgba(249, 115, 22, 0.22);
+}
+
+.status.in-progress {   /* in progress tasked button would be styled */
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.activity-item:has(.status.in-progress):hover {
+    border-color: #3b82f6;
+    box-shadow: 0 12px 24px rgba(59, 130, 246, 0.22);
+}
+
+.status.completed {   /* completed tasked button would be styled */
+    background: #dcfce7;
+    color: #166534;
+}
+
+.activity-item:has(.status.completed):hover {
+    border-color: #22c55e;
+    box-shadow: 0 12px 24px rgba(34, 197, 94, 0.22);
+}
+
+.delete-btn {  /* delete tasked button would be styled */
+    background: #fee2e2;
+    color: #991b1b;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;    
+}
+
+.delete-btn:hover {   /* when you hover on delete button, it get highlight */
+    background: #fecaca;
+    transform: translateY(-2px);
+}
+
+footer {   /* footer is styled */
+    background: #0f172a;
+    color: #d1d5db;
+    text-align: center;
+    padding: 24px 8% ;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {    /* website would appear differently on different phone screens */
+    header h1 {
+        font-size: 32px;
+    }
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-grid button {
+        padding: 14px;
+    }
+    .activity-item {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+    }
+    .status {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 480px) {  /* on small phone screens appearance */
+    .container {
+        padding: 0 6%;
+    }
+    header {
+        padding: 50px 0;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+    header p {
+        font-size: 16px;
+    }
+}

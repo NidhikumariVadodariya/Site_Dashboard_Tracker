@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Site Progress Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Site Progress Dashboard</h1>
+            <p>Track site activities, status, and overall project progress.</p>
+        </div>
+    </header>
+
+    <main class="dashboard">
+
+        <section class="container">
+
+            <div class="summary-cards">
+                
+                <div class="card total-card" data-filter="All">
+                    <h3>Total Activities</h3>
+                    <p id="totalActivities">0</p>
+                </div>
+
+                <div class="card completed-card" data-filter="Completed">
+                    <h3>Completed</h3>
+                    <p id = "completedActivities">0</p>
+                </div>
+
+                <div class="card progress-card" data-filter="In Progress">
+                    <h3>In Progress</h3>
+                    <p id="inProgressActivities">0</p>
+                </div>
+
+                <div class="card pending-card" data-filter="Pending">
+                    <h3>Pending</h3>
+                    <p id="pendingActivities">0</p>
+                </div>
+
+            </div>
+
+            <div class="progress-box">
+
+                <div class="progress-info">
+                    <h2>Overall Progress</h2>
+                    <span id="progressPercent">0%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+            </div>
+
+            <div class="form-box">
+                
+                <h2>Add Site Activity</h2>
+
+                <div class="form-grid">
+                    
+                    <input type="text" id="activityInput" placeholder="Enter site activity...">
+
+                    <select id="statusInput">
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+
+                    <button id="addActivityBtn">Add Activity</button>
+
+                </div>
+
+            </div>
+
+            <div class="activity-section">
+                
+                <h2>Activity Tracker</h2>
+
+                <div class="empty-state" id="emptyState">
+                    <p>No site activities added yet.</p>
+                </div>
+
+                <div class="activity-list" id="activityList">
+                    <!-- Activities will be added here using JavaScript -->
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Site Progress Dashboard. Portfolio project by Nidhi Vadodariya.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
