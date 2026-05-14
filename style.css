@@ -61,46 +61,46 @@ header p {     /* header's Site Progress Dashboard's paragraph is styled */
     transform: translateY(-4px);
 }
 
-.card.active-filter {
+.card.active-filter {  /* all the card filters is styled while active */
     transform: translateY(-4px);
 }
 
-.total-card.active-filter {
+.total-card.active-filter {   /* total card filter is styled while active */
     border: 1px solid #facc15;
     box-shadow: 0 14px 28px rgba(250, 204, 21, 0.25);
 }
 
-.completed-card.active-filter {
+.completed-card.active-filter {   /* completed card filter is styled while active */
     border: 1px solid #22c55e;
     box-shadow: 0 14px 28px rgba(34, 197, 94, 0.25);
 }
 
-.progress-card.active-filter {
+.progress-card.active-filter {   /* in progress card filter is styled while active */
     border: 1px solid #3b82f6;
     box-shadow: 0 14px 28px rgba(59, 130, 246, 0.25);
 }
 
-.pending-card.active-filter {
+.pending-card.active-filter {  /* pending card filter is styled while active */
     border: 1px solid #f97316;
     box-shadow: 0 14px 28px rgba(249, 115, 22, 0.25);
 }
 
-.total-card:hover {
+.total-card:hover {  /* total card is styled while hover on it */
     border: 1px solid #facc15;
     box-shadow: 0 14px 28px rgba(250, 204, 21, 0.25);
 }
 
-.completed-card:hover {
+.completed-card:hover {  /* completed card is styled while hover on it */
     border: 1px solid #22c55e;
     box-shadow: 0 14px 28px rgba(34, 197, 94, 0.25);
 }
 
-.progress-card:hover {
+.progress-card:hover {  /* in progress card is styled while hover on it */
     border: 1px solid #3b82f6;
     box-shadow: 0 14px 28px rgba(59, 130, 246, 0.25);
 }
 
-.pending-card:hover {
+.pending-card:hover {   /* pending card is styled while hover on it */
     border: 1px solid #f97316;
     box-shadow: 0 14px 28px rgba(249, 115, 22, 0.25);
 }
@@ -127,12 +127,12 @@ header p {     /* header's Site Progress Dashboard's paragraph is styled */
     margin-bottom: 28px;
 }
 
-.form-box:hover {
+.form-box:hover {  /* form box is styled while hover on it */
     transition: 0.3s ease;
     transform: translateY(-4px);
 }
 
-.activity-section:hover {
+.activity-section:hover {   /* activity-section is styled while hover on it */
     transition: 0.3s ease;
     transform: translateY(-4px);
 }
@@ -144,7 +144,7 @@ header p {     /* header's Site Progress Dashboard's paragraph is styled */
     margin-top: 18px;
 }
 
-.progress-box:hover {
+.progress-box:hover {   /* progress-box is styled while hover on it */
     transition: 0.3s ease;
     transform: translateY(-4px);
 }
@@ -237,7 +237,6 @@ header p {     /* header's Site Progress Dashboard's paragraph is styled */
     padding: 18px;
     border-radius: 12px;
     display: grid;
-    /* grid-template-columns: 1fr 140px 90px; */
     grid-template-columns: 1fr 160px 110px;
     align-items: center;
     gap: 14px;
@@ -310,7 +309,7 @@ header p {     /* header's Site Progress Dashboard's paragraph is styled */
     transform: translateY(-2px);
 }
 
-footer {   /* footer is styled */
+footer {    /* footer is styled */
     background: #0f172a;
     color: #d1d5db;
     text-align: center;

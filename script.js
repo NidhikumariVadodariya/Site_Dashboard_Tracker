@@ -42,7 +42,6 @@ function renderActivities () {
         return activity.status === currentFilter;
     });
 
-    // activities.forEach(function (activity) {
     filteredActivities.forEach(function (activity) {
         const activityItem = document.createElement("div");
         activityItem.classList.add("activity-item");
